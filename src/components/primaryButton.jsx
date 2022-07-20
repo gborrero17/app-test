@@ -10,7 +10,7 @@ class PrimaryButton extends Component {
       <>
         <Row className="m-5 mb-0 d-flex justify-content-center">
           <Button as={Col} className="btn-primary">
-            Get Started
+            {this.props.text}
           </Button>
         </Row>
       </>
