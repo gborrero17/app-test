@@ -16,7 +16,9 @@ const Home = () => {
         </div>
       </Link>
       <div className="mt-3">
-        <SecondaryOutlineButton text="Sign In" />
+        <Link to="/SignIn">
+          <SecondaryOutlineButton text="Sign In" />
+        </Link>
       </div>
     </React.StrictMode>
   );

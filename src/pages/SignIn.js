@@ -6,15 +6,17 @@ import { Link } from "react-router-dom";
 import PrimaryButton from "../components/primaryButton";
 import SecondaryOutlineButtonIcon from "../components/secondaryOutlineButtonIcon";
 
-const SignUp = () => {
+const SignIn = () => {
   return (
     <React.StrictMode>
       <GradientSignUp />
-      <div className="form-container ">
-        <Form className="signin-form">
+      <div className="form-container">
+        <Form className="signup-form">
           <Form.Group>
-            <div className="row mx-4">
-              <div className=" row col-12">
+            <div className="row mx-4 justify-content-center">
+              <div className="welcome">Welcome!</div>
+              <div className="signcontinue">Sign in to continue</div>
+              <div className=" row col-12 thinborder">
                 <div className="col-1">
                   <img
                     src={require("../img/fullnamepng.png")}
@@ -31,24 +33,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <div className=" row col-12">
-                <div className="col-1">
-                  <img
-                    src={require("../img/emailpng.png")}
-                    alt="Full Name"
-                  ></img>
-                </div>
-                <div className="col-11">
-                  <Form.Control
-                    className="email-input"
-                    type="text"
-                    placeholder="E-Mail"
-                    name="email"
-                  ></Form.Control>
-                </div>
-              </div>
-
-              <div className=" row col-12">
+              <div className=" row col-12 thinborder">
                 <div className="col-1">
                   <img
                     src={require("../img/passwordpng.png")}
@@ -64,40 +49,6 @@ const SignUp = () => {
                   ></Form.Control>
                 </div>
               </div>
-
-              <div className=" row col-12">
-                <div className="col-1">
-                  <img
-                    src={require("../img/datebirthpng.png")}
-                    alt="Full Name"
-                  ></img>
-                </div>
-                <div className="col-11">
-                  <Form.Control
-                    className="datebirth-input"
-                    type="date"
-                    placeholder="Date of Birth"
-                    name="datebirth"
-                  ></Form.Control>
-                </div>
-              </div>
-
-              <div className=" row col-12">
-                <div className="col-1">
-                  <img
-                    src={require("../img/zipcodepng.png")}
-                    alt="Full Name"
-                  ></img>
-                </div>
-                <div className="col-11">
-                  <Form.Control
-                    className="zipcode-input"
-                    type="text"
-                    placeholder="Post Code"
-                    name="zipcode"
-                  ></Form.Control>
-                </div>
-              </div>
             </div>
             <Link to="/SignUp">
               <PrimaryButton
@@ -109,7 +60,7 @@ const SignUp = () => {
             </Link>
           </Form.Group>
         </Form>
-        <div className="text-center p-3 underbutton">OR SIGN UP WITH</div>
+        <div className="text-center p-3 underbutton">OR LOGIN WITH</div>
         <SecondaryOutlineButtonIcon
           text="Sign up with Facebook"
           icon="facebookpng"
@@ -121,11 +72,11 @@ const SignUp = () => {
           />
         </div>
         <div className="text-center p-3 alreadytext">
-          Already have an account? <Link to="/">SignIn</Link>
+          Don't Have an Account? <Link to="/SignUp">Get Started</Link>
         </div>
       </div>
     </React.StrictMode>
   );
 };
 
-export default SignUp;
+export default SignIn;
