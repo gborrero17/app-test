@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../components/primaryButton";
+import SecondaryOutlineButtonIcon from "../components/secondaryOutlineButtonIcon";
 
 const SignUp = () => {
   return (
@@ -92,23 +93,36 @@ const SignUp = () => {
                   <Form.Control
                     className="zipcode-input"
                     type="text"
-                    placeholder="Zipcode"
+                    placeholder="Post Code"
                     name="zipcode"
                   ></Form.Control>
                 </div>
               </div>
-
-              <Link to="/SignUp">
-                <PrimaryButton
-                  className="submit-button"
-                  value="submit"
-                  type="submit"
-                  text="Sign Up"
-                />
-              </Link>
             </div>
+            <Link to="/SignUp">
+              <PrimaryButton
+                className="submit-button"
+                value="submit"
+                type="submit"
+                text="Sign Up"
+              />
+            </Link>
           </Form.Group>
         </Form>
+        <div className="text-center p-3 underbutton">OR SIGN UP WITH</div>
+        <SecondaryOutlineButtonIcon
+          text="Sign up with Facebook"
+          icon="facebookpng"
+        />
+        <div className="mt-3">
+          <SecondaryOutlineButtonIcon
+            text="Sign up with Twitter"
+            icon="twitterpng"
+          />
+        </div>
+        <div className="text-center p-3 alreadytext">
+          Already have an account? <Link to="/">SignIn</Link>
+        </div>
       </div>
     </React.StrictMode>
   );
