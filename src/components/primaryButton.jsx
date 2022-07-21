@@ -8,7 +8,7 @@ class PrimaryButton extends Component {
   render() {
     return (
       <>
-        <Row className="m-5 mb-0 d-flex justify-content-center">
+        <Row className="pt-4 mb-0 d-flex justify-content-center">
           <Button as={Col} className="btn-primary">
             {this.props.text}
           </Button>
