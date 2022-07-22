@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../components/primaryButton";
-import SecondaryOutlineButtonIcon from "../components/secondaryOutlineButtonIcon";
+import IconSecondaryOutlineButton from "../components/iconsecondaryOutlineButton";
 
 const SignIn = () => {
   return (
@@ -27,12 +27,12 @@ const SignIn = () => {
                   <Form.Control
                     className="fullname-input"
                     type="text"
-                    placeholder="Full Name"
+                    placeholder="Username or Email"
                     name="fullname"
                   ></Form.Control>
                 </div>
               </div>
-
+              <div className="pt-3"></div>
               <div className=" row col-12 thinborder">
                 <div className="col-1">
                   <img
@@ -50,26 +50,24 @@ const SignIn = () => {
                 </div>
               </div>
             </div>
-            <Link to="/SignUp">
-              <PrimaryButton
-                className="submit-button"
-                value="submit"
-                type="submit"
-                text="Sign Up"
-              />
-            </Link>
+            <div className="forgotpass">Forgot Password?</div>
+            <br></br> <br></br>
+            <div>
+              <Link to="/SignUp">
+                <PrimaryButton
+                  className="submit-button"
+                  value="submit"
+                  type="submit"
+                  text="Sign Up"
+                />
+              </Link>
+            </div>
           </Form.Group>
         </Form>
         <div className="text-center p-3 underbutton">OR LOGIN WITH</div>
-        <SecondaryOutlineButtonIcon
-          text="Sign up with Facebook"
-          icon="facebookpng"
-        />
+        <IconSecondaryOutlineButton text="Facebook" icon="facebookpng" />
         <div className="mt-3">
-          <SecondaryOutlineButtonIcon
-            text="Sign up with Twitter"
-            icon="twitterpng"
-          />
+          <IconSecondaryOutlineButton text="Twitter" icon="twitterpng" />
         </div>
         <div className="text-center p-3 alreadytext">
           Don't Have an Account? <Link to="/SignUp">Get Started</Link>

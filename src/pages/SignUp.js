@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../components/primaryButton";
-import SecondaryOutlineButtonIcon from "../components/secondaryOutlineButtonIcon";
+import IconSecondaryOutlineButton from "../components/iconsecondaryOutlineButton";
 
 const SignUp = () => {
   return (
@@ -13,15 +13,15 @@ const SignUp = () => {
       <div className="form-container ">
         <Form className="signin-form">
           <Form.Group>
-            <div className="row mx-4">
-              <div className=" row col-12">
+            <div className="row mx-4 justify-content-center">
+              <div className=" row col-12 thinborderbottom">
                 <div className="col-1">
                   <img
                     src={require("../img/fullnamepng.png")}
                     alt="Full Name"
                   ></img>
                 </div>
-                <div className="col-11">
+                <div className="col-11 ">
                   <Form.Control
                     className="fullname-input"
                     type="text"
@@ -31,7 +31,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <div className=" row col-12">
+              <div className=" row col-12 thinborderbottom">
                 <div className="col-1">
                   <img
                     src={require("../img/emailpng.png")}
@@ -48,7 +48,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <div className=" row col-12">
+              <div className=" row col-12 thinborderbottom">
                 <div className="col-1">
                   <img
                     src={require("../img/passwordpng.png")}
@@ -65,7 +65,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <div className=" row col-12">
+              <div className=" row col-12 thinborderbottom">
                 <div className="col-1">
                   <img
                     src={require("../img/datebirthpng.png")}
@@ -82,7 +82,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <div className=" row col-12">
+              <div className=" row col-12 thinborderbottom">
                 <div className="col-1">
                   <img
                     src={require("../img/zipcodepng.png")}
@@ -99,7 +99,7 @@ const SignUp = () => {
                 </div>
               </div>
             </div>
-            <Link to="/SignUp">
+            <Link to="/BuildProfile">
               <PrimaryButton
                 className="submit-button"
                 value="submit"
@@ -110,18 +110,12 @@ const SignUp = () => {
           </Form.Group>
         </Form>
         <div className="text-center p-3 underbutton">OR SIGN UP WITH</div>
-        <SecondaryOutlineButtonIcon
-          text="Sign up with Facebook"
-          icon="facebookpng"
-        />
+        <IconSecondaryOutlineButton text="Facebook" icon="facebookpng" />
         <div className="mt-3">
-          <SecondaryOutlineButtonIcon
-            text="Sign up with Twitter"
-            icon="twitterpng"
-          />
+          <IconSecondaryOutlineButton text="Twitter" icon="twitterpng" />
         </div>
         <div className="text-center p-3 alreadytext">
-          Already have an account? <Link to="/">SignIn</Link>
+          Already have an account? <Link to="/SignIn">SignIn</Link>
         </div>
       </div>
     </React.StrictMode>

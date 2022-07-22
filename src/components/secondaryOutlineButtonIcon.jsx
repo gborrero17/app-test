@@ -8,7 +8,7 @@ class SecondaryOutlineButtonIcon extends Component {
   render() {
     return (
       <>
-        <Row className="mx-5 d-flex justify-content-center">
+        <Row className="mx-4 d-flex justify-content-center">
           <Button as={Col} className="btn-outline-secondary">
             {this.props.text}
 
